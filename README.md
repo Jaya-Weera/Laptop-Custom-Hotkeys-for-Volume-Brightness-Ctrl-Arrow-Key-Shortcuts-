@@ -23,7 +23,7 @@ Works on **Windows 10/11** with **AutoHotkey v2.0+**
 
 | Volume OSD | Brightness OSD |
 |-------------|----------------|
-| ![Volume](screenshots/demo_osd.png) | ![Brightness](screenshots/demo_osd.png) |
+| ![Volume](screenshots/demo_osd_v.png) | ![Brightness](screenshots/demo_osd_b.png) |
 
 *(Add your screenshots in `/screenshots`.)*
 
