@@ -29,38 +29,51 @@ Works on **Windows 10/11** with **AutoHotkey v2.0+**
 
 ---
 
-## 🚀 Setup
+## 🚀 Installation/Setup
 
-1. **Install AutoHotkey v2**
-   - [Download AutoHotkey v2](https://www.autohotkey.com/download/)
+### 1️⃣ Using the Compiled .exe
 
-2. **Clone this repository**
+Go to the Releases section on GitHub.
+
+Download the latest laptop-hotkeys.exe.
+
+Run the .exe — no AutoHotkey installation required.
+
+Use Ctrl + Arrow keys as described.
+
+### 2️⃣ Using the `.ahk` Script
+1. Install [AutoHotkey v2](https://www.autohotkey.com/download/).  
+2. Clone the repository:
    ```bash
-   git clone https://github.com/<yourusername>/laptop-hotkeys.git
+   git clone https://github.com/Jaya-Weera/Laptop-Custom-Hotkeys-for-Volume-Brightness-Ctrl-Arrow-Key-Shortcuts-.git
    cd laptop-hotkeys
-Run the script
+ 3. Run the script:
+   Double-click src/laptop-hotkeys.ahk
+   A green “H” icon appears in the system tray
 
-Double-click ctrl_media_hotkeys.ahk
+ 4. Use Ctrl + Arrow keys to control volume and brightness.
 
-A green “H” icon will appear in your system tray
 
-Use the shortcuts
 
-Ctrl + ↑ / Ctrl + ↓ → Volume up / down
 
-Ctrl + ← / Ctrl + → → Brightness up / down
+### 📌 Optional: Run on Windows Startup
 
-(Optional) — Add to startup
+Press Win + R, type shell:startup, and press Enter.
 
-Press Win + R, type shell:startup, then press Enter
+Copy laptop-hotkeys.exe into the Startup folder.
 
-Copy or link the .ahk file into that folder
+From now on, the program will automatically run whenever Windows starts.
 
-⚙️ Script Overview
-🔈 Volume Control
+✅ Tip: You can also create a desktop shortcut or pin it to the taskbar for quick access.
+
+
+
+
+####⚙️ Script Overview
+###🔈 Volume Control
 Uses native AHK SoundGetVolume() and SoundSetVolume() to adjust system master volume smoothly.
 
-💡 Brightness Control
+###💡 Brightness Control
 Uses Windows WMI (root\WMI) interface:
 
 text
@@ -69,7 +82,7 @@ WmiMonitorBrightness
 WmiMonitorBrightnessMethods
 with Active=TRUE to adjust the current display brightness.
 
-🪟 On-Screen Display (OSD)
+###🪟 On-Screen Display (OSD)
 Displays a small centered popup showing:
 
 yaml
@@ -82,13 +95,7 @@ Rounded edges
 
 Auto-hide after 1 second
 
-🧩 File Structure
-File	Description
-ctrl_media_hotkeys.ahk	Main AutoHotkey script
-.gitignore	Ignores build & cache files
-LICENSE	MIT open-source license
-README.md	Documentation
-screenshots/	Optional image previews
+ 
 
 ⚠️ Notes
 Works on most Windows laptops and PCs.
@@ -97,6 +104,14 @@ Requires AutoHotkey v2.0+ (not v1).
 
 Brightness control may not work if your device uses custom GPU drivers that disable WMI access.
 
+⚡ Compiling to EXE (Optional)
+
+If you want a standalone executable:
+
+ahk2exe /in src/laptop-hotkeys.ahk /out build/laptop-hotkeys.exe /icon assets/hotkey.ico
+
+
+GitHub Actions can also automatically compile the .exe on every tagged release. 
 📜 License
 This project is licensed under the MIT License — free to use, modify, and distribute.
 See the LICENSE file for details.
